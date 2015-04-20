@@ -9,8 +9,12 @@ Requires accompanying files:
 If sec is not installed, you will hear about it from SimpleEvcorrWrapper __init__().
 """
 
-import SimpleEvcorrWrapper
 import json
+
+import os
+import sys
+sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
+import SimpleEvcorrWrapper
 
 foo = SimpleEvcorrWrapper.SimpleEvcorrWrapper(conf_path="sample.conf")
 events = foo.start("sample.input")
